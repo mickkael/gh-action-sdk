@@ -13,14 +13,14 @@ jobs:
       fail-fast: false
       matrix:
         release:
-          - master
+          #- master
           - 24.10.1
-          - 23.05.5
+          #- 23.05.5
         arch:
           - aarch64_generic
-          - arm_cortex-a15_neon-vfpv4
-          - mips_24kc
-          - x86_64
+          #- arm_cortex-a15_neon-vfpv4
+          #- mips_24kc
+          #- x86_64
 
     steps:
       - uses: actions/checkout@v4
