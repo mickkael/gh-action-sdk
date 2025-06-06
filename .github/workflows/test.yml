@@ -41,3 +41,8 @@ jobs:
 
       - name: Verify logs saved
         run: find artifacts/logs/package/feeds/packages/ -mindepth 2 -maxdepth 2 -name compile.txt -type f | grep .
+      - name: Store packages
+        uses: actions/upload-artifact@latest
+        with:
+          name: ${{ matrix.arch}}-packages
+          path: bin/packages/${{ matrix.arch }}/packages/*.ipk
